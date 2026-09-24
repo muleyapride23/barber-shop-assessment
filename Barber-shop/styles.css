@@ -280,7 +280,7 @@ blockquote em {
 
 .about-hero > img {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 3;
     object-fit: cover
 }
 
@@ -303,32 +303,6 @@ blockquote em {
     height: auto;
     aspect-ratio: 3 / 1;
     object-fit: cover
-}
-
-.team-grid article img,
-.profile-portrait {
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    object-fit: cover;
-    background: var(--cream)
-}
-
-.profile-portrait {
-    background-image: url('Barber-shop/profiles/profiles.png');
-    background-size: 300% 100%;
-    background-repeat: no-repeat;
-}
-
-.profile-marcus {
-    background-position: left center
-}
-
-.profile-tendai {
-    background-position: center center
-}
-
-.profile-ryan {
-    background-position: right center
 }
 
 .team-grid h3 {
@@ -859,7 +833,7 @@ blockquote em {
     }
     .about-hero > img {
         margin-top: 35px;
-        aspect-ratio: 4 / 5
+        aspect-ratio: 4 / 3
     }
     .team-grid {
         grid-template-columns: 1fr;
@@ -994,7 +968,10 @@ blockquote em {
 }
 
 .team-grid article {
-    padding-bottom: 24px;
+    border: 1px solid var(--line);
+    padding: 24px;
+    background: #171717;
+    min-height: 100%;
     transition: transform .25s ease, background-color .25s ease;
 }
 
@@ -1003,7 +980,3 @@ blockquote em {
     background: #202020
 }
 
-.team-grid article > *:not(.profile-portrait) {
-    margin-left: 16px;
-    margin-right: 16px
-}
