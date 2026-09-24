@@ -290,6 +290,21 @@ blockquote em {
     gap: 24px
 }
 
+.team-banner {
+    margin: 36px 0 42px;
+    overflow: hidden;
+    background: var(--ink);
+    border: 1px solid var(--line)
+}
+
+.team-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 1;
+    object-fit: cover
+}
+
 .team-grid article img,
 .profile-portrait {
     width: 100%;
@@ -874,6 +889,14 @@ blockquote em {
     .craft-grid > img {
         margin-bottom: 34px
     }
+    .team-banner {
+        margin-top: 28px;
+        margin-bottom: 34px
+    }
+    .team-banner img {
+        aspect-ratio: 1.6 / 1;
+        object-position: center
+    }
     .story-copy {
         max-width: none
     }
@@ -968,4 +991,19 @@ blockquote em {
     height: 42px;
     object-fit: cover;
     border-radius: 50%;
+}
+
+.team-grid article {
+    padding-bottom: 24px;
+    transition: transform .25s ease, background-color .25s ease;
+}
+
+.team-grid article:hover {
+    transform: translateY(-6px);
+    background: #202020
+}
+
+.team-grid article > *:not(.profile-portrait) {
+    margin-left: 16px;
+    margin-right: 16px
 }
