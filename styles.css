@@ -1,11 +1,11 @@
 :root {
-    --ink: #17211e;
-    --paper: #f5f1e9;
-    --cream: #ebe4d7;
-    --copper: #b96745;
-    --sage: #788576;
-    --line: #cfc8bb;
-    --white: #fffdf8;
+    --ink: #0D0D0D;
+    --paper: #171717;
+    --cream: #292929;
+    --copper: #C9A227;
+    --sage: #A7A7A7;
+    --line: #292929;
+    --white: #F5F2EA;
     --serif: 'Playfair Display', Georgia, serif;
     --sans: 'DM Sans', Arial, sans-serif
 }
@@ -21,7 +21,7 @@ html {
 body {
     margin: 0;
     background: var(--paper);
-    color: var(--ink);
+    color: var(--white);
     font: 15px/1.6 var(--sans)
 }
 
@@ -44,7 +44,7 @@ img {
 
 .announcement {
     background: var(--ink);
-    color: #f7f0e5;
+    color: var(--white);
     padding: 9px 20px;
     text-align: center;
     font-size: 11px;
@@ -58,8 +58,8 @@ img {
 }
 
 .announcement a {
-    color: #eac7b7;
-    border-bottom: 1px solid #eac7b7
+    color: #E0BC45;
+    border-bottom: 1px solid #E0BC45
 }
 
 .site-header {
@@ -203,7 +203,7 @@ blockquote em {
 
 .hero-lede {
     max-width: 400px;
-    color: #59615c;
+    color: var(--sage);
     margin: 0 0 31px;
     font-size: 16px
 }
@@ -229,8 +229,8 @@ blockquote em {
 }
 
 .button-dark {
-    background: var(--ink);
-    color: var(--white)
+    background: var(--copper);
+    color: var(--ink)
 }
 
 .button-light {
@@ -255,6 +255,14 @@ blockquote em {
     position: relative
 }
 
+.hero-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 13, 13, .22);
+    pointer-events: none
+}
+
 .hero-image img {
     width: 100%;
     height: 610px;
@@ -270,7 +278,8 @@ blockquote em {
     display: flex;
     gap: 13px;
     align-items: center;
-    box-shadow: 0 12px 28px #17211e16
+    box-shadow: 0 12px 28px #00000066;
+    z-index: 1
 }
 
 .image-note p {
@@ -330,7 +339,7 @@ blockquote em {
 
 .intro-grid>div>p {
     max-width: 490px;
-    color: #5d665f
+    color: var(--sage)
 }
 
 .stat-block {
@@ -347,7 +356,7 @@ blockquote em {
 
 .stat-block span {
     font-size: 11px;
-    color: #6b706a;
+    color: var(--sage);
     text-transform: uppercase;
     letter-spacing: .1em
 }
@@ -385,7 +394,7 @@ blockquote em {
 
 .service-row:hover {
     padding-left: 12px;
-    background: #efe9de
+    background: #202020
 }
 
 .service-number {
@@ -399,7 +408,7 @@ blockquote em {
 }
 
 .service-row small {
-    color: #6b706a
+    color: var(--sage)
 }
 
 .service-row>b {
@@ -412,7 +421,7 @@ blockquote em {
 }
 
 .quote-section {
-    background: var(--sage);
+    background: #292929;
     color: var(--white);
     padding: 106px 0
 }
@@ -423,7 +432,7 @@ blockquote em {
 
 .quote-mark {
     font: 100px/.5 var(--serif);
-    color: #d2cfb9;
+    color: #E0BC45;
     position: absolute;
     top: 9px
 }
@@ -436,7 +445,7 @@ blockquote em {
 }
 
 .quote-inner blockquote em {
-    color: #dfb399
+    color: #E0BC45
 }
 
 .quote-inner p {
@@ -490,8 +499,8 @@ blockquote em {
 }
 
 .site-footer {
-    background: #101815;
-    color: #c0c8bd;
+    background: #0D0D0D;
+    color: #A7A7A7;
     padding: 64px 0 22px;
     font-size: 12px
 }
@@ -556,7 +565,7 @@ blockquote em {
 .modal-backdrop {
     position: absolute;
     inset: 0;
-    background: #101815b8
+    background: #000000cc
 }
 
 .modal-card {
@@ -573,12 +582,12 @@ blockquote em {
 }
 
 .modal-card p:not(.section-kicker) {
-    color: #606b63
+    color: var(--sage)
 }
 
 .modal-card small {
     display: block;
-    color: #8a9186;
+    color: var(--sage);
     margin-top: 18px
 }
 
@@ -589,7 +598,7 @@ blockquote em {
     border: 0;
     background: none;
     font-size: 30px;
-    color: var(--ink);
+    color: var(--white);
     cursor: pointer
 }
 
