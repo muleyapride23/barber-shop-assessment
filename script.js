@@ -36,7 +36,7 @@ function setupBooking() {
 
     function updateSummary() { const s = services[serviceSelect.value];
         document.querySelector('#summary-service').textContent = s ? s.name : 'Choose a service';
-        document.querySelector('#summary-price').textContent = s ? '£' + s.price : '—';
+        document.querySelector('#summary-price').textContent = s ? '$' + s.price : '—';
         document.querySelector('#summary-barber').textContent = barbers[barberSelect.value] || 'Any barber';
         document.querySelector('#summary-date').textContent = dateInput.value ? formatDate(dateInput.value) : 'Select a date';
         document.querySelector('#summary-time').textContent = timeSelect.value || 'Select a time'; }
@@ -59,4 +59,4 @@ function calendarDate(date, time) { const [h, m] = time.split(':'); const d = ne
 
 function googleUrl(data) { const t = calendarDate(data.date, data.time); return 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=' + encodeURIComponent(`PMe · ${data.service.name}`) + '&dates=' + t.start + '/' + t.end + '&details=' + encodeURIComponent(`Appointment with ${data.barber}. Booked for ${data.name}. See you at PMe Barber Studio.`) + '&location=' + encodeURIComponent('Borrowdale, Harare, Zimbabwe') }
 
-function icsUrl(data) { const t = calendarDate(data.date, data.time); const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//PMe//Booking//EN', 'BEGIN:VEVENT', `UID:pme-${Date.now()}@pridemuleya.co.uk`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'')}`, `DTSTART:${t.start}`, `DTEND:${t.end}`, `SUMMARY:PMe · ${data.service.name}`, `DESCRIPTION:Appointment with ${data.barber}. Booked for ${data.name}.`, `LOCATION:Borrowdale\\, Harare\\, Zimbabwe`, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n'); return 'data:text/calendar;charset=utf8,' + encodeURIComponent(ics) }
+function icsUrl(data) { const t = calendarDate(data.date, data.time); const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//PMe//Booking//EN', 'BEGIN:VEVENT', `UID:pme-${Date.now()}@pridemuleya.co.zw`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'')}`, `DTSTART:${t.start}`, `DTEND:${t.end}`, `SUMMARY:PMe · ${data.service.name}`, `DESCRIPTION:Appointment with ${data.barber}. Booked for ${data.name}.`, `LOCATION:Borrowdale\\, Harare\\, Zimbabwe`, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n'); return 'data:text/calendar;charset=utf8,' + encodeURIComponent(ics) }
