@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Book a chair | PMe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .booking-main {
+            padding: 70px 0 110px
+        }
+        
+        .booking-grid {
+            display: grid;
+            grid-template-columns: 1.25fr .75fr;
+            gap: 80px
+        }
+        
+        .booking-main h1 {
+            font: 700 clamp(45px, 6vw, 72px)/1 var(--serif);
+            letter-spacing: -.05em;
+            margin: 12px 0 22px
+        }
+        
+        .booking-intro {
+            color: #687169;
+            max-width: 500px
+        }
+        
+        .booking-form {
+            margin-top: 48px
+        }
+        
+        .form-section {
+            border-top: 1px solid var(--line);
+            padding: 27px 0
+        }
+        
+        .form-section h2 {
+            font: 700 21px var(--serif);
+            margin: 0 0 20px
+        }
+        
+        .field-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px
+        }
+        
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 7px
+        }
+        
+        .field label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            font-weight: 700
+        }
+        
+        .field input,
+        .field select {
+            background: var(--white);
+            border: 1px solid var(--line);
+            padding: 13px 12px;
+            font: 14px var(--sans);
+            color: var(--ink);
+            border-radius: 0
+        }
+        
+        .field input:focus,
+        .field select:focus {
+            outline: 2px solid var(--copper);
+            outline-offset: 1px
+        }
+        
+        .validated input:invalid,
+        .validated select:invalid {
+            border-color: #bd5c47
+        }
+        
+        .booking-submit {
+            margin-top: 12px;
+            border: 0;
+            cursor: pointer
+        }
+        
+        .booking-summary {
+            background: var(--ink);
+            color: var(--white);
+            padding: 34px;
+            align-self: start;
+            position: sticky;
+            top: 25px
+        }
+        
+        .booking-summary h2 {
+            font: 700 30px var(--serif);
+            margin: 0 0 27px
+        }
+        
+        .summary-line {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #465149;
+            padding: 12px 0;
+            color: #b6c1b8;
+            font-size: 13px
+        }
+        
+        .summary-line strong {
+            color: var(--white);
+            font-weight: 500;
+            text-align: right
+        }
+        
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+            font: 700 20px var(--serif)
+        }
+        
+        .summary-note {
+            font-size: 11px;
+            color: #9ca99e;
+            margin-top: 27px
+        }
+        
+        .confirmation {
+            background: var(--cream);
+            padding: 50px;
+            max-width: 700px
+        }
+        
+        .confirmation h2 {
+            font: 700 40px var(--serif);
+            margin: 8px 0
+        }
+        
+        .confirmation p {
+            color: #616b63
+        }
+        
+        .calendar-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px
+        }
+        
+        .calendar-actions .button {
+            border: 0;
+            cursor: pointer
+        }
+        
+        .calendar-actions .button-light {
+            border: 1px solid var(--ink)
+        }
+        
+        @media(max-width:760px) {
+            .booking-main {
+                padding: 50px 0 75px
+            }
+            .booking-grid {
+                display: block
+            }
+            .booking-summary {
+                margin-top: 55px;
+                position: static
+            }
+            .field-grid {
+                grid-template-columns: 1fr
+            }
+            .confirmation {
+                padding: 30px 22px
+            }
+            .confirmation h2 {
+                font-size: 34px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="announcement">New clients receive a complimentary hot towel finish <span>•</span> <a href="booking.html">Book your first visit</a></div>
+    <header class="site-header"><a class="brand" href="index.html"><img class="brand-logo" src="pmelogo.png" alt="PMe logo"><span class="brand-name">PRIDE <i>MULEYA</i><small>BARBER STUDIO</small></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span><b class="sr-only">Open menu</b></button>
+        <nav
+            id="main-nav" class="main-nav"><a href="index.html">Home</a><a href="services.html">Services</a><a href="about.html">Our story</a><a class="active" href="booking.html">Visit us</a><a class="nav-cta" href="booking.html">Book a chair <span>↗</span></a></nav>
+    </header>
+    <main class="booking-main">
+        <div class="container" id="booking-form-wrap">
+            <div class="booking-grid">
+                <div>
+                    <p class="section-kicker">Reserve your chair</p>
+                    <h1>Let’s make a<br><em>plan.</em></h1>
+                    <p class="booking-intro">Choose your service, find a time that works and we’ll take care of the rest. Appointments usually take between 30 and 75 minutes.</p>
+                    <form id="booking-form" class="booking-form" novalidate>
+                        <div class="form-section">
+                            <h2>01 · Choose a service</h2>
+                            <div class="field-grid">
+                                <div class="field"><label for="service">Service</label><select id="service" required><option value="">Select a service</option><option value="signature-cut">The Signature Cut · £38</option><option value="skin-fade">Skin Fade · £42</option><option value="beard-reset">Beard Reset · £26</option><option value="cut-beard">Cut & Beard · £58</option><option value="buzz-cut">Buzz Cut · £25</option><option value="junior-cut">Junior Cut · £24</option><option value="head-shave">Head Shave · £30</option></select></div>
+                                <div
+                                    class="field"><label for="barber">Preferred barber</label><select id="barber" required><option value="">Choose a barber</option><option value="alex">Alex Morgan</option><option value="maya">Maya Patel</option><option value="sam">Sam Okafor</option></select></div>
+                        </div>
+                </div>
+                <div class="form-section">
+                    <h2>02 · Find a time</h2>
+                    <div class="field-grid">
+                        <div class="field"><label for="date">Date</label><input id="date" type="date" required></div>
+                        <div class="field"><label for="time">Time</label><select id="time" required><option value="">Select a time</option><option>09:00</option><option>10:00</option><option>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option><option>17:00</option><option>18:00</option></select></div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h2>03 · Your details</h2>
+                    <div class="field-grid">
+                        <div class="field"><label for="name">Full name</label><input id="name" type="text" autocomplete="name" placeholder="Your name" required></div>
+                        <div class="field"><label for="email">Email address</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+                        <div class="field"><label for="phone">Phone number</label><input id="phone" type="tel" autocomplete="tel" placeholder="07..." required></div>
+                    </div><button class="button button-dark booking-submit" type="submit">Confirm appointment <span>↗</span></button></div>
+                </form>
+            </div>
+            <aside class="booking-summary">
+                <p class="section-kicker">Your visit</p>
+                <h2>A little time<br>for yourself.</h2>
+                <div class="summary-line"><span>Service</span><strong id="summary-service">Choose a service</strong></div>
+                <div class="summary-line"><span>Barber</span><strong id="summary-barber">Any barber</strong></div>
+                <div class="summary-line"><span>Date</span><strong id="summary-date">Select a date</strong></div>
+                <div class="summary-line"><span>Time</span><strong id="summary-time">Select a time</strong></div>
+                <div class="summary-total"><span>Total</span><strong id="summary-price">—</strong></div>
+                <p class="summary-note">Need to change something? Just reply to your confirmation email or call us on 020 7946 0184.</p>
+            </aside>
+        </div>
+        </div>
+        <div class="container confirmation" id="confirmation" hidden>
+            <p class="section-kicker">You’re all set</p>
+            <h2>See you soon, <em id="confirm-name">there</em>.</h2>
+            <p id="confirm-detail">Your appointment is confirmed.</p>
+            <p>Add it to your calendar so it’s one less thing to remember.</p>
+            <div class="calendar-actions"><a id="google-calendar" class="button button-dark" target="_blank" rel="noreferrer">Add to Google Calendar <span>↗</span></a><a id="download-ics" class="button button-light" download="pride-muleya-appointment.ics">Download for Apple Calendar <span>↓</span></a></div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-top"><a class="brand brand-footer" href="index.html"><img class="brand-logo" src="pmelogo.png" alt="PMe logo"><span class="brand-name">PRIDE <i>MULEYA</i><small>BARBER STUDIO</small></span></a>
+            <div>
+                <p class="footer-label">Find us</p>
+                <p>18 Willow Lane<br>Northbridge, NB4 2TL</p><a href="mailto:hello@pridemuleya.co.uk">hello@pridemuleya.co.uk</a></div>
+            <div>
+                <p class="footer-label">Opening hours</p>
+                <p>Tue—Fri · 09:00—19:00<br>Sat · 09:00—17:00<br>Sun—Mon · Closed</p>
+            </div>
+            <div>
+                <p class="footer-label">Follow along</p>
+                <div class="socials"><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram ↗</a><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook ↗</a></div>
+            </div>
+        </div>
+        <div class="container footer-bottom"><span>© 2026 Pride Muleya Barber Studio</span><span><a href="terms.html">Terms & conditions</a><a href="booking.html">Book a chair</a></span></div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
