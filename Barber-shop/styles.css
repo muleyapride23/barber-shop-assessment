@@ -265,7 +265,8 @@ blockquote em {
 
 .hero-image img {
     width: 100%;
-    height: 610px;
+    aspect-ratio: 4 / 3;
+    height: auto;
     object-fit: cover
 }
 
@@ -281,6 +282,7 @@ blockquote em {
 .about-hero > img {
     width: 100%;
     aspect-ratio: 4 / 3;
+    height: auto;
     object-fit: cover
 }
 
@@ -433,6 +435,7 @@ blockquote em {
 .story-grid img {
     width: 100%;
     aspect-ratio: 4 / 3;
+    height: auto;
     object-fit: cover
 }
 
@@ -460,7 +463,8 @@ blockquote em {
 
 .craft-grid > img {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 3;
+    height: auto;
     object-fit: cover
 }
 
@@ -824,7 +828,8 @@ blockquote em {
         font-size: 58px
     }
     .hero-image img {
-        height: 420px
+        aspect-ratio: 4 / 3;
+        height: auto
     }
     .about-hero {
         display: block;

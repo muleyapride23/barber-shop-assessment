@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" role="img" aria-labelledby="title desc">
-  <title id="title">PMe logo</title>
-  <desc id="desc">White PMe wordmark with a thin elliptical arc on black.</desc>
-  <rect width="500" height="500" fill="#050505"/>
-  <path d="M113 186 C181 79 322 74 394 158" fill="none" stroke="#fff" stroke-width="5"/>
-  <path d="M104 302 C71 248 85 204 111 168" fill="none" stroke="#fff" stroke-width="5"/>
-  <text x="83" y="296" fill="#fff" font-family="Georgia, serif" font-size="142" font-weight="700" letter-spacing="-18">PMe</text>
-</svg>
