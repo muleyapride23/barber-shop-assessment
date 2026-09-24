@@ -362,6 +362,68 @@ blockquote em {
     padding: 94px 0
 }
 
+.story-section {
+    padding: 96px 0
+}
+
+.story-light {
+    background: var(--cream)
+}
+
+.story-dark {
+    background: var(--ink);
+    color: var(--white)
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(40px, 8vw, 110px);
+    align-items: center
+}
+
+.story-grid-reverse img {
+    order: 2
+}
+
+.story-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover
+}
+
+.story-copy {
+    max-width: 490px
+}
+
+.story-copy h2 {
+    font: 700 clamp(36px, 4vw, 58px)/1.04 var(--serif);
+    letter-spacing: -.04em;
+    margin: 16px 0 22px
+}
+
+.story-copy p:not(.section-kicker) {
+    color: var(--sage);
+    max-width: 440px
+}
+
+.craft-grid {
+    display: grid;
+    grid-template-columns: minmax(220px, .8fr) 1.2fr;
+    gap: 55px;
+    align-items: center
+}
+
+.craft-grid > img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover
+}
+
+.finish-section {
+    margin-top: 0
+}
+
 .intro-grid {
     display: grid;
     grid-template-columns: 1fr 1.8fr .7fr;
@@ -742,6 +804,26 @@ blockquote em {
     }
     .intro-band {
         padding: 70px 0
+    }
+    .story-section {
+        padding: 70px 0
+    }
+    .story-grid,
+    .craft-grid {
+        display: block
+    }
+    .story-grid-reverse img {
+        order: initial
+    }
+    .story-grid img,
+    .craft-grid > img {
+        margin-bottom: 34px
+    }
+    .story-copy {
+        max-width: none
+    }
+    .craft-grid .service-list {
+        margin-top: 10px
     }
     .intro-grid {
         display: block
