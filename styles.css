@@ -269,6 +269,45 @@ blockquote em {
     object-fit: cover
 }
 
+.about-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8%;
+    align-items: center;
+    padding-top: 64px;
+    padding-bottom: 96px
+}
+
+.about-hero > img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px
+}
+
+.team-grid article img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    background: var(--cream)
+}
+
+.team-grid h3 {
+    margin: 15px 0 3px;
+    font: 700 22px var(--serif)
+}
+
+.team-grid p {
+    margin: 0;
+    color: var(--sage);
+    font-size: 12px
+}
+
 .image-note {
     position: absolute;
     bottom: -25px;
@@ -680,6 +719,19 @@ blockquote em {
     }
     .hero-image img {
         height: 420px
+    }
+    .about-hero {
+        display: block;
+        padding-top: 45px;
+        padding-bottom: 70px
+    }
+    .about-hero > img {
+        margin-top: 35px;
+        aspect-ratio: 4 / 5
+    }
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 34px
     }
     .image-note {
         left: 14px
