@@ -7,7 +7,7 @@ const services = {
     'junior-cut': { name: 'Junior Cut', price: 24, duration: 30 },
     'head-shave': { name: 'Head Shave', price: 30, duration: 30 }
 };
-const barbers = { alex: 'Alex Morgan', maya: 'Maya Patel', sam: 'Sam Okafor' };
+const barbers = { marcus: 'Marcus Dube', tendai: 'Tendai Moyo', ryan: 'Ryan Ndlovu' };
 
 document.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu-toggle'),

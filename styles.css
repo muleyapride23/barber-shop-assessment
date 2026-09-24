@@ -290,11 +290,30 @@ blockquote em {
     gap: 24px
 }
 
-.team-grid article img {
+.team-grid article img,
+.profile-portrait {
     width: 100%;
     aspect-ratio: 4 / 5;
     object-fit: cover;
     background: var(--cream)
+}
+
+.profile-portrait {
+    background-image: url('Barber-shop/profiles/profiles.png');
+    background-size: 300% 100%;
+    background-repeat: no-repeat;
+}
+
+.profile-marcus {
+    background-position: left center
+}
+
+.profile-tendai {
+    background-position: center center
+}
+
+.profile-ryan {
+    background-position: right center
 }
 
 .team-grid h3 {
@@ -306,6 +325,42 @@ blockquote em {
     margin: 0;
     color: var(--sage);
     font-size: 12px
+}
+
+.section-heading > p small {
+    display: block;
+    max-width: 310px;
+    margin-top: 14px;
+    color: var(--sage);
+    font-size: 12px;
+    line-height: 1.6
+}
+
+.team-grid .team-role {
+    color: var(--copper);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase
+}
+
+.team-grid .team-speciality {
+    margin-top: 11px;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 600
+}
+
+.team-grid blockquote {
+    margin: 18px 0 12px;
+    color: var(--copper);
+    font: italic 16px/1.4 var(--serif)
+}
+
+.team-grid .team-bio {
+    color: var(--sage);
+    font-size: 13px;
+    line-height: 1.65
 }
 
 .image-note {
